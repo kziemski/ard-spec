@@ -51,7 +51,7 @@ urn:ai:acme.com:finance:trading
 
 ## 4. The Core Mechanics
 
-Agent Finder operates on a simple envelope design using **IANA Media Types** (like `application/mcp-server+json` or `application/a2a-agent-card+json`) to wrapper different protocols, delegating execution details to the underlying schemas.
+Agent Finder operates on a simple envelope design using standard and proposed **IANA Media Types** (like `application/mcp-server+json` or `application/a2a-agent-card+json`) to wrapper different protocols, delegating execution details to the underlying schemas.
 
 ```mermaid
 sequenceDiagram

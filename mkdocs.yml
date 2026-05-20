@@ -7,6 +7,8 @@ site_description: Federated Discovery and Search for AI Agents and Capabilities
 theme:
   name: material
   custom_dir: overrides
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
   font:
     text: Outfit
     code: Fira Code
@@ -72,9 +74,19 @@ plugins:
 # Navigation
 nav:
   - Home: index.md
-  - Why Agent Finder: why.md
+  - About:
+    - Why Agent Finder?: why.md
+    - Comparisons: comparisons.md
+    - Contributors: contributors.md
+    - FAQ: faq.md
+  - Guides:
+    - How to publish: how_to_publish.md
+    - How agents search: how_agents_search.md
   - Specifications:
     - Agent Finder Spec: spec.md
     - AI Catalog Spec: ai_catalog_spec.md
   - Ecosystem:
     - Implementations: implementations.md
+    - Open-plugins: open_plugins.md
+    - Zed's ACP Agent Registry: zed_acp.md
+    - Anthropic's MCP Registry: anthropic_mcp.md

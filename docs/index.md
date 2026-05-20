@@ -1,92 +1,56 @@
 ---
 title: Agent Finder — Federated Search and Discovery for AI Capabilities
 hide:
-  - navigation
   - toc
 ---
 
-<div class="landing-page">
+# What is Agent Finder?
 
-  <!-- Ambient Glows -->
-  <div class="glow-sphere glow-1"></div>
-  <div class="glow-sphere glow-2"></div>
+Agent Finder is an open standard for discovering agent extensibility mechanisms. It enables anyone to build a search engine for skills, MCPs, subagents, and A2A capabilities, making them discoverable to any agent harness—whether it be **Gemini, Claude Code, Copilot, Codex, or Manus**.
 
-  <!-- Hero Section -->
-  <div class="hero-container">
-<div class="hero-text">
-  <h1>Discover AI Capabilities <span class="hero-title-gradient">Federated & Search-First</span></h1>
-  <p class="hero-subtitle">
-    Agent Finder is a standardized, domain-anchored discovery specification designed to catalog, search, and discover AI capabilities (MCP servers, A2A cards, skills, and services) across federated networks.
-  </p>
-  <div class="hero-buttons">
-    <a href="why/" class="btn btn-primary">Why It's Needed</a>
-    <a href="spec/" class="btn btn-secondary">Read the Specification</a>
-  </div>
-</div>
+[Get Started](why/){: .btn .btn-primary } [Read the Specification](spec/){: .btn .btn-secondary }
 
-    <!-- Code Window -->
-    <div class="mac-window">
-      <div class="window-header">
-        <div class="window-dot dot-red"></div>
-        <div class="window-dot dot-yellow"></div>
-        <div class="window-dot dot-green"></div>
-        <div class="window-title">ai-catalog.json</div>
-      </div>
-      <div class="window-body">
-<pre><span class="kw">{</span>
-  <span class="str">"specVersion"</span>: <span class="str">"1.0"</span>,
-  <span class="str">"host"</span>: <span class="kw">{</span>
-    <span class="str">"displayName"</span>: <span class="str">"Acme AI"</span>,
-    <span class="str">"identifier"</span>: <span class="str">"did:web:acme.com"</span>
-  <span class="kw">}</span>,
-  <span class="str">"entries"</span>: <span class="kw">[</span>
-    <span class="kw">{</span>
-      <span class="str">"identifier"</span>: <span class="str">"urn:ai:acme:agent:trading"</span>,
-      <span class="str">"displayName"</span>: <span class="str">"Finance Trading Agent"</span>,
-      <span class="str">"type"</span>: <span class="str">"application/a2a-agent-card+json"</span>,
-      <span class="str">"url"</span>: <span class="str">"https://api.acme.com/agent.json"</span>,
-      <span class="str">"representativeQueries"</span>: <span class="kw">[</span>
-        <span class="str">"analyze market trend for 2026"</span>
-      <span class="kw">]</span>
-    <span class="kw">}</span>
-  <span class="kw">]</span>
-<span class="kw">}</span></pre>
-      </div>
-    </div>
-  </div>
+---
 
-  <!-- Features Section -->
-  <div class="features-section">
-    <div class="features-section-header">
-      <h2>Why Agent Finder?</h2>
-      <p>Architected to solve discovery, scaling, trust, and interop problems for LLMs at global scale.</p>
-    </div>
+## Why Agent Finder?
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <h3>Search-First Discovery</h3>
-        <p>Discover capabilities dynamically at runtime via queries, rather than using pre-installed or hardcoded lists.</p>
-      </div>
+Discovering capabilities to enhance your agent (skills, subagents, hooks) is currently a manual, developer-locked process. With the volume of tools and agents exploding into the millions, sifting through them or pre-installing thousands of integrations is no longer practical. Even with basic search, traditional tool selection degrades in accuracy and latency when context windows are stuffed with thousands of schemas.
 
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Context Scalability</h3>
-        <p>Externalize semantic rank computation to dedicated search indexes, scaling to millions of tools without token bloat.</p>
-      </div>
+### What Agents Should Do
+1.  **Global Access**: Access the world's growing catalog of tools and capabilities.
+2.  **Zero Prompt Bloat**: Maintain minimal active toolsets to prevent context window degradation.
+3.  **Billions-Scale Discovery**: Find the exact tool for the right task out of a catalog of billions.
+4.  **Decentralized Trust**: Establish cryptographic trust relationships with authors and sources.
+5.  **On-the-Fly Execution**: Install and invoke these capabilities dynamically at runtime.
 
-      <div class="feature-card">
-        <div class="feature-icon">🛡️</div>
-        <h3>Progressive Trust Layers</h3>
-        <p>Verifiable identity anchors linked with SOC2/GDPR compliance attestations and detached signatures.</p>
-      </div>
+### What Agent Finder Enables
+*   **🔌 Federated Search**: Stand up a decentralized search engine for any agent capability (MCP, skills, A2A, and custom APIs).
+*   **🌐 Self-Sovereign Publishing**: Host your standard `ai-catalog.json` at a well-known domain root (`/.well-known/`) to advertise your capabilities.
+*   **⚡ Cross-Harness Portability**: Enable any agent from any harness to dynamically discover, verify, and use your tools.
 
-      <div class="feature-card">
-        <div class="feature-icon">🌐</div>
-        <h3>Universal Federation</h3>
-        <p>Standardized HTTP REST search interfaces coordinate upstream nodes, providing unified results instantly.</p>
-      </div>
-    </div>
-  </div>
+---
 
-</div>
+## Quick Preview
+
+Here is how a publisher advertises an MCP server using the standard `ai-catalog.json` manifest:
+
+```json
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Acme AI",
+    "identifier": "did:web:acme.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:acme.com:agent:trading",
+      "displayName": "Finance Trading Agent",
+      "type": "application/mcp-server+json",
+      "url": "https://api.acme.com/agent.json",
+      "representativeQueries": [
+        "analyze market trend for 2026"
+      ]
+    }
+  ]
+}
+```

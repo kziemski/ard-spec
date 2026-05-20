@@ -4,19 +4,25 @@ Discover active implementations, dynamic search sandbox endpoints, and platform 
 
 ---
 
-## Active Deployments
+## Reference Implementations
 
-### 1. Mindpower Agent Finder
-An example client-side implementation indexing, listing, and running search discovery for multiple registered agents and tools.
-* **Live URL**: [https://mindpower.github.io/agent-finder/](https://mindpower.github.io/agent-finder/)
-* **Type**: Registry Directory UI
-* **Status**: Active
+<div class="upcoming-cards">
+  
+  <div class="upcoming-card">
+    <span class="upcoming-badge" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">Active</span>
+    <h3>Mindpower Agent Finder</h3>
+    <p style="margin-bottom: 16px;">An example client-side implementation indexing, listing, and running search discovery for multiple registered agents and tools.</p>
+    <a href="https://mindpower.github.io/agent-finder/" target="_blank" style="font-size: 0.8rem; padding: 0.5rem 1rem; margin-top: auto; display: inline-block; align-self: flex-start; border-radius: 8px; text-decoration: none; background-color: var(--md-accent-fg-color); color: white; font-weight: 600;">Visit Live Directory</a>
+  </div>
 
-### 2. HuggingFace EvalState Search API
-An example dynamic search endpoint built according to the Agent Finder specification. Demonstrates direct `POST /search` capabilities.
-* **API Documentation**: [https://evalstate-hf-agentfinder.hf.space/docs#/](https://evalstate-hf-agentfinder.hf.space/docs#/)
-* **Type**: Dynamic Search Registry (`POST /search`)
-* **Status**: Active
+  <div class="upcoming-card">
+    <span class="upcoming-badge" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">Active</span>
+    <h3>HuggingFace EvalState API</h3>
+    <p style="margin-bottom: 16px;">An example dynamic search endpoint built according to the Agent Finder specification. Demonstrates direct <code>POST /search</code> capabilities.</p>
+    <a href="https://evalstate-hf-agentfinder.hf.space/docs#/" target="_blank" style="font-size: 0.8rem; padding: 0.5rem 1rem; margin-top: auto; display: inline-block; align-self: flex-start; border-radius: 8px; text-decoration: none; border: 1.5px solid var(--md-default-fg-color); color: var(--md-default-fg-color); font-weight: 600;">View API Docs</a>
+  </div>
+
+</div>
 
 ---
 
@@ -41,9 +47,6 @@ We are partnering with top enterprise platforms to roll out native discovery end
 
 ## Joining the Ecosystem
 
-Exposing your agents to Agent Finder registries is simple:
+Exposing your agents and tools to Agent Finder registries is simple. 
 
-1. Create an [ai-catalog.json](ai_catalog_spec.md) at your domain root (e.g., `https://yourdomain.com/.well-known/ai-catalog.json`).
-2. Add standard `entries` with their `identifier`, `displayName`, `type`, and `url` or inline `data`.
-3. Provide 2-5 `representativeQueries` to enable high-fidelity vector embeddings.
-4. Submit your FQDN to federated indices or let global crawlers discover your endpoint automatically!
+Please refer to our step-by-step **[How to Publish](how_to_publish.md)** guide for detailed instructions on hosting your `ai-catalog.json` manifest, setting up DNS service bindings, and enabling vector embeddings.
