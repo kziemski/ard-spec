@@ -17,6 +17,7 @@ This repository contains the formal specification and related documentation for 
 - [Repository Structure](#-repository-structure)
 - [Version Status](#-version-status)
 - [Ecosystem Alignment & Acknowledgments](#-ecosystem-alignment--acknowledgments)
+- [License](#-license)
 
 ---
 
@@ -116,3 +117,9 @@ Registries support three client-controlled federation models:
 ## 🤝 Ecosystem Alignment & Acknowledgments
 
 Agent Finder is directly based on and extends the [ai-catalog](https://github.com/Agent-Card/ai-catalog) specification. The ai-catalog standard provides the base artifact-agnostic data model, progressive trust layer, and validation rules. Agent Finder builds upon these standards to define dynamic registry search APIs (`POST /search`), federated query routing mechanisms, and domain-anchored naming schemes to enable dynamic runtime capability discovery.
+
+---
+
+## ⚖️ License
+
+This project is licensed under the [Apache License, Version 2.0](LICENSE). See the [LICENSE](LICENSE) file for the full license text.
