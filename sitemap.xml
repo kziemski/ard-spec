@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://agentfinder.dev/</loc>
+         <loc>https://zeroasterisk.github.io/agentfinder/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://agentfinder.dev/ai_catalog_spec/</loc>
+         <loc>https://zeroasterisk.github.io/agentfinder/ai_catalog_spec/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://agentfinder.dev/implementations/</loc>
+         <loc>https://zeroasterisk.github.io/agentfinder/implementations/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://agentfinder.dev/spec/</loc>
+         <loc>https://zeroasterisk.github.io/agentfinder/spec/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://agentfinder.dev/why/</loc>
+         <loc>https://zeroasterisk.github.io/agentfinder/why/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
 </urlset>
