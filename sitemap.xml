@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://zeroasterisk.github.io/agentfinder/</loc>
+         <loc>https://agentfinder-project.github.io/agentfinder/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://zeroasterisk.github.io/agentfinder/ai_catalog_spec/</loc>
+         <loc>https://agentfinder-project.github.io/agentfinder/ai_catalog_spec/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://zeroasterisk.github.io/agentfinder/implementations/</loc>
+         <loc>https://agentfinder-project.github.io/agentfinder/anthropic_mcp/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://zeroasterisk.github.io/agentfinder/spec/</loc>
+         <loc>https://agentfinder-project.github.io/agentfinder/comparisons/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://zeroasterisk.github.io/agentfinder/why/</loc>
+         <loc>https://agentfinder-project.github.io/agentfinder/contributors/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/faq/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/how_agents_search/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/how_to_build_search/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/how_to_publish/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/implementations/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/open_plugins/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/spec/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/why/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://agentfinder-project.github.io/agentfinder/zed_acp/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
 </urlset>
