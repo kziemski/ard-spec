@@ -640,4 +640,30 @@ The HTTP query interfaces (`POST /search` and `GET /agents`) exposed by complian
   * References the JSON Schema `ai-catalog.schema.json` schema files to ensure search and list return types are statically bound to the specification's schema constraints.
   * Allows automated router middleware enforcement and client/server stub generation (using tools like OpenAPI Generator).
 
+### D.4 Official Conformance Testing Tool
+
+To simplify development and guarantee complete compliance, this repository provides an official, zero-dependency **Conformance Testing CLI Tool** written in Python. It allows publishers to test their manifests and registry developers to validate their REST API servers.
+
+* **Testing Tool Executable**: [`bin/conformance-test`](../bin/conformance-test)
+
+#### Features:
+* **Manifest validation mode**: Parses JSON manifests, runs strict JSON Schema checks (using the Python `jsonschema` library if installed), and executes custom semantic checks (e.g., URN formatting rules, Value-or-Reference enforcement, `representativeQueries` sizing).
+* **Registry validation mode**: Probes live endpoints (`POST /search` and `GET /agents`), sends spec-compliant search requests, and validates status codes, pagination envelopes, search result scores, and catalog entry structures.
+
+#### Usage Examples:
+
+Validate a local or remote `ai-catalog.json` manifest:
+```bash
+# Validate a local catalog file
+./bin/conformance-test manifest path/to/ai-catalog.json
+
+# Validate a remote well-known catalog manifest
+./bin/conformance-test manifest https://example.com/.well-known/ai-catalog.json
+```
+
+Validate a running Agent Registry REST API:
+```bash
+./bin/conformance-test registry http://localhost:9010/api
+```
+
 
