@@ -2,6 +2,8 @@
 site_name: Agent Finder
 site_url: https://agentfinder-project.github.io/agentfinder/
 site_description: Federated Discovery and Search for AI Agents and Capabilities
+repo_name: agentfinder-project/agentfinder
+repo_url: https://github.com/agentfinder-project/agentfinder
 
 # Configuration
 theme:
