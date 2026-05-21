@@ -16,7 +16,9 @@ All of you are building agents, tools, skills, and more. We encourage you to add
 - Anthropic (pending confirmation)
 - AWS (pending confirmation)
 - Cisco (pending confirmation)
+- Nvidia (pending confirmation)
 - SAP (pending confirmation)
+- Snowflake (pending confirmation)
 
 ## How to contribute
 
