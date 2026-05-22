@@ -81,10 +81,71 @@ Since domain names are already globally unique via the DNS root, anchoring your 
    * Vercel: `urn:ai:your-app.vercel.app:my-agent`
    * Netlify: `urn:ai:your-site.netlify.app:my-agent`
    * GitHub Pages: `urn:ai:your-username.github.io:my-agent`
+---
+
+### Scenario C: Enterprise Developers or Developers with a Verified Domain
+For developers inside an enterprise or those who own a custom domain (e.g., `acme.com`), they should use their real FQDN as the URN publisher even when developing and running locally. 
+
+This ensures that the URN remains completely identical between their local development, staging, and production catalogs, avoiding the need to rewrite downstream orchestration rules or client references.
+
+* **Guidance**:
+  * **URN (Identity)**: Use the real FQDN (e.g., `urn:ai:acme.com:finance:tax-agent`).
+  * **Physical Endpoint**: Point to `localhost` in the local development manifest, and to the production gateway or API host in the production manifest.
+
+#### Local Manifest Example (`ai-catalog-local.json`):
+```json
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Acme Finance Local Dev",
+    "identifier": "did:web:dev.acme.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:acme.com:finance:tax-agent",
+      "displayName": "Corporate Tax Assistant",
+      "type": "application/a2a-agent-card+json",
+      "url": "http://localhost:8000/agents/tax-assistant",
+      "description": "Local development build of Corporate Tax Assistant."
+    }
+  ]
+}
+```
+
+#### Production Manifest Example (`ai-catalog.json` hosted at `https://acme.com/.well-known/ai-catalog.json`):
+```json
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Acme Corporation",
+    "identifier": "did:web:acme.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:acme.com:finance:tax-agent",
+      "displayName": "Corporate Tax Assistant",
+      "type": "application/a2a-agent-card+json",
+      "url": "https://api.acme.com/finance/tax-assistant",
+      "description": "Official Corporate Tax Assistant with production identity verification.",
+      "trustManifest": {
+        "identity": "spiffe://acme.com/finance/tax-agent",
+        "identityType": "spiffe",
+        "attestations": [
+          {
+            "type": "SOC2-Type2",
+            "uri": "https://trust.acme.com/soc2.pdf"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
 
 ---
 
 ## 4. Summary Reference Table
+
 
 | Deployment Context | Publisher FQDN | URN Example | Physical URL (Endpoint) | Trust Manifest Capability |
 | :--- | :--- | :--- | :--- | :--- |
