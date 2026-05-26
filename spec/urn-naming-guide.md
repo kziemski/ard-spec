@@ -61,7 +61,7 @@ If you are building and testing an agent that will **only run locally** and will
   ]
 }
 ```
-*This catalog will successfully pass syntax compliance checks (such as the `conformance-test` suite), while keeping the physical execution targeted to localhost.*
+*This catalog will successfully pass syntax compliance checks (such as the `conformance-test` suite), while keeping the physical execution targeted to localhost. For the formal architectural and standards-compliance rationale behind these placeholder choices, see [ADR-0003](../adr/0003-urn-placeholder-rfc2606-alignment.md).*
 
 ---
 
