@@ -20,14 +20,14 @@ We refined the URN pattern definition to be fully RFC 8141-compliant, highly fle
 
 1. **Decoupled Namespace Segments**:
    * The pattern was refactored to require a minimum of one publisher domain segment and one terminal agent name segment, allowing intermediate namespace segments to be optional and recursive:
-     `^urn:ai:[a-zA-Z0-9.-]+:(?:[a-zA-Z0-9._-]+:)*[a-zA-Z0-9._-]+$`
+     `^urn:ai:[a-zA-Z0-9.-]+(?::[a-zA-Z0-9._-]+)+$`
 2. **Support Underscores (`_`) in Namespace and Agent Name**:
    * Added underscore support to all non-domain segments.
 3. **Strict FQDN Constraints for Publisher Domain**:
    * Kept the `<publisher>` domain segment strictly constrained to `[a-zA-Z0-9.-]` (alphanumeric, dots, and hyphens). Under standard DNS rules (RFC 1123 / RFC 952), public FQDNs do not permit underscores. This maintains strict network-level DNS safety.
 4. **Python Conformance Adjustment**:
    * Updated the official python conformance checking tool `conformance-test` regex class to safely handle the python regex compiler character ranges (moving the literal dash `-` to the end of character classes):
-     `r"^urn:ai:([a-zA-Z0-9.-]+):(?:([a-zA-Z0-9._:-]+):)?([a-zA-Z0-9._-]+)$"`
+     `r"^urn:ai:([a-zA-Z0-9.-]+)(?::([a-zA-Z0-9._:-]+))?:([a-zA-Z0-9._-]+)$"`
 
 ## Consequences
 * **Ergonomics**: Developers can use natural naming styles containing underscores (e.g., `travel_concierge`).

@@ -12,7 +12,7 @@ import urllib.request
 import urllib.error
 
 # Strict URN Regex matching urn:ai:<publisher>:<namespace>:<agent-name>
-URN_REGEX = re.compile(r"^urn:ai:([a-zA-Z0-9.-]+):(?:([a-zA-Z0-9._:-]+):)?([a-zA-Z0-9._-]+)$")
+URN_REGEX = re.compile(r"^urn:ai:([a-zA-Z0-9.-]+)(?::([a-zA-Z0-9._:-]+))?:([a-zA-Z0-9._-]+)$")
 
 # Colors for beautiful CLI output
 COLOR_RESET = "\033[0m"
