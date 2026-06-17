@@ -771,3 +771,18 @@ To instantly run a complete end-to-end verification suite utilizing a pre-bundle
 ./conformance/bin/run-conformance-demo
 ```
 This script performs manifest schema validation, launches a mock registry server in the background, executes live search and listing queries against it using the conformance tester, and gracefully terminates the server when finished.
+
+## Acknowledgements
+
+The authors thank the following people for their contributions and feedback, in no particular order.
+
+- Microsoft — Miesha Baker, Shelby Delano, Kevin Scott, Dee Templeton, Jeremy Moseley, Ryan Nadel, Jennifer Marsmann, Lisa Jaloza, Lindsey Li, Chelsea Carter, Adam Zukor
+- GitHub — Evan Boyle, Trent Jones, Jeremy Moseley, Meagan Cojocar
+- GoDaddy — Scott Courtney
+- Nvidia — Aysen Ilkhabar
+- Google — Alan Blount, Rao Surapaneni, Todd Segal, John Murray, Ines David, Sam Sharaf, Sampath Kumar Maddula, Natasha Balasubramanian, Polong Lin, Srinivas Krishnan, Krishna Thota
+- Cisco — Luca Muscariello, Ramiz Polic, Karen Jaworski, Vijoy Pandey, Guillaume De Saint Marc
+- Salesforce — Vijay Pandiarajan, Mariano Gonzales
+- Amazon Web Services — Martin Ristov, Jeffrey Damick
+- Databricks — Jonathan Keller, Vinod Marur
+- Snowflake — Baris Gultekin, Vivek Raghunathan
